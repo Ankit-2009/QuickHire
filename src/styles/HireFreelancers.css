@@ -1,0 +1,325 @@
+/* General Styles */
+.min-h-screen {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header Section */
+.header-section {
+  background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+  padding: 80px 20px 40px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #adff2f, #7fff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(173, 255, 47, 0.2);
+}
+
+.header-section p {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Search Container */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 20px;
+  padding-right: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #adff2f;
+  box-shadow: 0 0 20px rgba(173, 255, 47, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #adff2f;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-button:hover {
+  color: #7fff00;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Freelancers Grid */
+.freelancers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.5rem;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Freelancer Card */
+.freelancer-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.freelancer-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(173, 255, 47, 0.15),
+      transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.freelancer-card:hover::before {
+  opacity: 1;
+}
+
+.freelancer-card>* {
+  position: relative;
+  z-index: 1;
+}
+
+.freelancer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(173, 255, 47, 0.1);
+  border-color: rgba(173, 255, 47, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.freelancer-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #adff2f;
+}
+
+.freelancer-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #adff2f;
+  font-size: 0.9rem;
+}
+
+.rating i {
+  color: #ffd700;
+}
+
+.completed-jobs {
+  color: #888;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
+.skill-tag {
+  background: rgba(173, 255, 47, 0.1);
+  color: #adff2f;
+  padding: 0px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(173, 255, 47, 0.2);
+  white-space: nowrap;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.skill-tag:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.075);
+  border-color: rgba(173, 255, 47, 0.3);
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hourly-rate {
+  color: #adff2f;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.view-profile-btn {
+  background: rgba(173, 255, 47, 0.1);
+  color: #adff2f;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(173, 255, 47, 0.2);
+  transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+  background: #5daa0a;
+  color: #ffffff;
+}
+
+/* No Results */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.no-results i {
+  font-size: 3rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.no-results p {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* Post Job Section */
+.post-job-section {
+  background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.post-job-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.post-job-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.post-job-content p {
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.post-job-btn {
+  display: inline-flex;
+  align-items: center;
+  /* gap: 10px; */
+  /* background: #54be0d; */
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #54be0d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.post-job-btn:hover {
+  background: #74c50c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(173, 255, 47, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-section {
+    padding: 60px 20px 30px;
+  }
+
+  .header-section h1 {
+    font-size: 2rem;
+  }
+
+  .freelancers-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .post-job-section {
+    padding: 40px 20px;
+  }
+
+  .post-job-content h2 {
+    font-size: 1.5rem;
+  }
+}

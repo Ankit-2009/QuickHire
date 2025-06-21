@@ -1,0 +1,215 @@
+/* Piyush */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    background-color: #333;
+}
+
+/* Piyush */
+/* body {
+    width: 100%;
+    background: linear-gradient(to top, black, green, #9cbf01);
+    color: #f8ebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+} */
+
+/* Vaibhav */
+header {
+    text-align: center;
+    padding: 20px;
+    color: rgba(4, 3, 3, 0.601);
+    width: 100%;
+}
+
+/* Vaibhav */
+header img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+/* Piyush */
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 2.5rem;
+    background: linear-gradient(45deg,#000000, #11ca00, #bbff01);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+/* Piyush */
+/* #background {
+    height: auto;
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(to top, black, green, #9cbf01);
+    z-index: 1;
+} */
+
+/* Piyush */
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(48, 48, 48), black, rgb(48, 48, 48));
+    border-radius: 40px;
+    margin: 20px auto;
+    width: 90vw;
+    height: 6vh;
+    max-width: 900px;
+}
+
+
+/* Piyush */
+.description p {
+    position: relative;
+    /* bottom: 17px; */
+    font-size: 1.5rem;
+    color: #f9f9f7;
+}
+
+/* Piyush */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Piyush */
+.member {
+    background-color: rgba(0, 0, 0, 0.36);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgb(145, 145, 145);
+    width: calc(100% / 3 - 40px);
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
+/* Piyush */
+@media (max-width: 768px) {
+    .member {
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+/* Piyush */
+@media (max-width: 480px) {
+    .member {
+        width: calc(100% - 40px);
+    }
+}
+
+/* Piyush */
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgb(140, 210, 0);
+}
+
+/* Piyush */
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+/* Piyush */
+.member h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #e3e3e2;
+}
+
+/* Piyush */
+.member p {
+    font-size: 0.9rem;
+    color: #ecede8;
+}
+
+/* Vaibhav */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Vaibhav */
+.whatsapp,
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Vaibhav */
+.whatsapp-number {
+    visibility: hidden;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+/* Piyush */
+.whatsapp:hover .whatsapp-number {
+    visibility: visible;
+}
+
+/* Piyush */
+.linkedin-link img,
+.whatsapp img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Piyush */
+.project-details {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: auto;
+    max-width: 900px;
+}
+
+/* Piyush */
+.project-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fcfcfc;
+}
+
+/* Piyush */
+.project-details p {
+    font-size: 1.2rem;
+    color: #fcfcfc;
+}

@@ -1,0 +1,202 @@
+.login-auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    /* overflow: hidden; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.login-border-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 600px;
+    width: 400px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    animation: glow 4s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+.login-gradient-border {
+    height: 100vh;
+    width: 10vw;
+    background: linear-gradient(rgb(0, 173, 0), greenyellow, greenyellow);
+    position: absolute;
+    z-index: 1;
+    animation: rotate 6s linear infinite;
+}
+
+.login-mask {
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    position: absolute;
+    z-index: 2;
+    background: black;
+    border-radius: 22px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    animation: glow 4s linear infinite;
+    overflow: hidden;
+}
+
+.login-box {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    justify-content: space-between;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header img {
+    height: 60px;
+    /* margin-bottom: 16px; */
+}
+
+.login-header h1 {
+    color: yellowgreen;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-shadow: 0 0 5px yellowgreen
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.login-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    animation: glow 4s liner infinite;
+}
+
+.login-input-group label {
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px yellowgreen
+    /* font-weight: bolder; */
+    /* margin-left: 4px; */
+}
+
+.login-input-group input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    animation: glow 4s linear infinite;
+    /* text-align: center; */
+}
+
+.login-input-group input:focus {
+    outline: none;
+    border-color: greenyellow;
+    box-shadow: 0 0 0 2px rgba(173, 255, 47, 0.2);
+}
+
+.login-forgot-password-container {
+    text-align: right;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.login-forgot-password-link {
+    color: #aaa;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-forgot-password-link:hover {
+    color: greenyellow;
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, rgb(0, 173, 0), greenyellow);
+    color: rgb(255, 255, 255);
+    /* font-weight: 600; */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    animation: glow 4s linear infinite;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(173, 255, 47, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.login-btn.loading {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.login-links {
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.login-signup-link {
+    color: greenyellow;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.login-signup-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px rgba(173, 255, 47, 0.5);
+}
+
+.login-error-message {
+    color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
