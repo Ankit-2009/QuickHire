@@ -30,6 +30,7 @@ const Dashboard = () => {
     { id: 2, name: "Node.js", level: "Advanced" },
     { id: 3, name: "TypeScript", level: "Intermediate" },
   ]);
+  // @ts-ignore
   const [projects, setProjects] = useState<Project[]>([
     {
       id: 1,
@@ -103,7 +104,7 @@ const Dashboard = () => {
   };
 
   const handleRemoveSkill = (skillId: number) => {
-    const skillToRemove = skills.find(skill => skill.id === skillId);
+    const skillToRemove = skills.find((skill) => skill.id === skillId);
     setSkills(skills.filter((skill) => skill.id !== skillId));
 
     // Add activity for removed skill
@@ -151,13 +152,17 @@ const Dashboard = () => {
 
           <div className="dashboard-nav">
             <button
-              className={`nav-button ${activeTab === "overview" ? "active" : ""}`}
+              className={`nav-button ${
+                activeTab === "overview" ? "active" : ""
+              }`}
               onClick={() => setActiveTab("overview")}
             >
               Overview
             </button>
             <button
-              className={`nav-button ${activeTab === "projects" ? "active" : ""}`}
+              className={`nav-button ${
+                activeTab === "projects" ? "active" : ""
+              }`}
               onClick={() => setActiveTab("projects")}
             >
               Projects
@@ -169,7 +174,9 @@ const Dashboard = () => {
               Skills
             </button>
             <button
-              className={`nav-button ${activeTab === "settings" ? "active" : ""}`}
+              className={`nav-button ${
+                activeTab === "settings" ? "active" : ""
+              }`}
               onClick={() => setActiveTab("settings")}
             >
               Settings
@@ -207,15 +214,21 @@ const Dashboard = () => {
                   {activities.map((activity) => (
                     <div key={activity.id} className="activity-item">
                       <div className={`activity-icon ${activity.type}`}>
-                        <i className={`bx ${
-                          activity.type === "project" ? "bx-folder" : 
-                          activity.type === "skill" ? "bx-badge-check" : 
-                          "bx-money"
-                        }`}></i>
+                        <i
+                          className={`bx ${
+                            activity.type === "project"
+                              ? "bx-folder"
+                              : activity.type === "skill"
+                              ? "bx-badge-check"
+                              : "bx-money"
+                          }`}
+                        ></i>
                       </div>
                       <div className="activity-details">
                         <p>{activity.description}</p>
-                        <div className="activity-time">{activity.timestamp}</div>
+                        <div className="activity-time">
+                          {activity.timestamp}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -231,7 +244,11 @@ const Dashboard = () => {
                     <div key={project.id} className="project-card">
                       <h3>{project.title}</h3>
                       <div className="project-status">
-                        <span className={`status-badge ${project.status.toLowerCase().replace(" ", "-")}`}>
+                        <span
+                          className={`status-badge ${project.status
+                            .toLowerCase()
+                            .replace(" ", "-")}`}
+                        >
                           {project.status}
                         </span>
                         <span>Deadline: {project.deadline}</span>
@@ -263,7 +280,11 @@ const Dashboard = () => {
                   <div key={project.id} className="project-card">
                     <h3>{project.title}</h3>
                     <div className="project-status">
-                      <span className={`status-badge ${project.status.toLowerCase().replace(" ", "-")}`}>
+                      <span
+                        className={`status-badge ${project.status
+                          .toLowerCase()
+                          .replace(" ", "-")}`}
+                      >
                         {project.status}
                       </span>
                       <span>Deadline: {project.deadline}</span>
@@ -329,7 +350,9 @@ const Dashboard = () => {
                   <h3>Profile Settings</h3>
                   <button className="setting-btn">Edit Profile</button>
                   <button className="setting-btn">Change Password</button>
-                  <button className="setting-btn">Notification Preferences</button>
+                  <button className="setting-btn">
+                    Notification Preferences
+                  </button>
                 </div>
                 <div className="setting-card">
                   <h3>Billing Information</h3>
@@ -352,11 +375,15 @@ const Dashboard = () => {
               type="text"
               placeholder="Skill Name"
               value={newSkill.name}
-              onChange={(e) => setNewSkill({...newSkill, name: e.target.value})}
+              onChange={(e) =>
+                setNewSkill({ ...newSkill, name: e.target.value })
+              }
             />
             <select
               value={newSkill.level}
-              onChange={(e) => setNewSkill({...newSkill, level: e.target.value})}
+              onChange={(e) =>
+                setNewSkill({ ...newSkill, level: e.target.value })
+              }
             >
               <option value="Beginner">Beginner</option>
               <option value="Intermediate">Intermediate</option>
@@ -380,30 +407,40 @@ const Dashboard = () => {
               type="text"
               placeholder="Name"
               value={profileData.name}
-              onChange={(e) => setProfileData({...profileData, name: e.target.value})}
+              onChange={(e) =>
+                setProfileData({ ...profileData, name: e.target.value })
+              }
             />
             <input
               type="email"
               placeholder="Email"
               value={profileData.email}
-              onChange={(e) => setProfileData({...profileData, email: e.target.value})}
+              onChange={(e) =>
+                setProfileData({ ...profileData, email: e.target.value })
+              }
             />
             <textarea
               placeholder="Bio"
               value={profileData.bio}
-              onChange={(e) => setProfileData({...profileData, bio: e.target.value})}
+              onChange={(e) =>
+                setProfileData({ ...profileData, bio: e.target.value })
+              }
             ></textarea>
             <input
               type="text"
               placeholder="Location"
               value={profileData.location}
-              onChange={(e) => setProfileData({...profileData, location: e.target.value})}
+              onChange={(e) =>
+                setProfileData({ ...profileData, location: e.target.value })
+              }
             />
             <input
               type="text"
               placeholder="Hourly Rate"
               value={profileData.hourlyRate}
-              onChange={(e) => setProfileData({...profileData, hourlyRate: e.target.value})}
+              onChange={(e) =>
+                setProfileData({ ...profileData, hourlyRate: e.target.value })
+              }
             />
             <div className="modal-actions">
               <button onClick={handleProfileUpdate}>Save Changes</button>
